@@ -3,7 +3,7 @@ Summary(pl):	ulT1mo - zestaw fontów Type1 z kodowaniem iso8859-2
 Name:		fonts-Type1-ulT1mo
 Version:	1.0beta
 Release:	1
-License:	freeware
+License:	Freeware
 Group:		X11/Fonts
 Source0:	ulT1mo-beta-1.0.tgz
 Source1:	%{name}.Fontmap
