@@ -4,7 +4,7 @@ Name:		fonts-Type1-ulT1mo
 Version:	1.0beta
 Release:	4
 License:	Freeware
-Group:		X11/Fonts
+Group:		Fonts
 Source0:	ulT1mo-beta-1.0.tgz
 # Source0-md5:	90533d6c3b505333e7e78ffc0451beb5
 Source1:	%{name}.Fontmap
