@@ -2,13 +2,13 @@ Summary:	ulT1mo collection of Type1 fonts with iso8859-2 encoding
 Summary(pl):	ulT1mo - zestaw fontów Type1 z kodowaniem iso8859-2
 Name:		fonts-Type1-ulT1mo
 Version:	1.0beta
-Release:	3
+Release:	4
 License:	Freeware
 Group:		X11/Fonts
 Source0:	ulT1mo-beta-1.0.tgz
 # Source0-md5:	90533d6c3b505333e7e78ffc0451beb5
 Source1:	%{name}.Fontmap
-Requires(post,postun):	fontpostinst
+Requires(post,postun):	fontpostinst >= 0.1-6
 Requires:	%{_fontsdir}/Type1
 Obsoletes:	XFree86-fonts-Type1-ISO8859-2
 Obsoletes:	XFree86-ISO8859-2-Type1-fonts
