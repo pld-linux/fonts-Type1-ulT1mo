@@ -2,7 +2,7 @@ Summary:	ulT1mo collection of Type1 fonts with iso8859-2 encoding
 Summary(pl):	ulT1mo - zestaw fontów Type1 z kodowaniem iso8859-2
 Name:		fonts-Type1-ulT1mo
 Version:	1.0beta
-Release:	1
+Release:	2
 License:	Freeware
 Group:		X11/Fonts
 Source0:	ulT1mo-beta-1.0.tgz
@@ -58,8 +58,6 @@ sed -e 's/\.pfb/-ISO-8859-2\.pfb/' fonts.scale.ulT1mo\
 install fonts.alias.ulT1mo $RPM_BUILD_ROOT%{t1fontsdir}/fonts.alias.ulT1mo
 install %{SOURCE1} $RPM_BUILD_ROOT%{t1fontsdir}/Fontmap.ulT1mo
 
-gzip -9nf README.*
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -95,7 +93,7 @@ fi
 
 %files
 %defattr(644,root,root,755)
-%doc README*.gz
+%doc README*
 %{t1fontsdir}/*.pfb
 %{t1fontsdir}/fonts.scale.ulT1mo
 %{t1fontsdir}/fonts.alias.ulT1mo
