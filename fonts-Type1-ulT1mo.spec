@@ -7,15 +7,13 @@ License:	Freeware
 Group:		X11/Fonts
 Source0:	ulT1mo-beta-1.0.tgz
 Source1:	%{name}.Fontmap
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+Requires(post,postun):	fileutils
+Requires(post,postun):	textutils
 Obsoletes:	XFree86-fonts-Type1-ISO8859-2
 Obsoletes:	XFree86-ISO8859-2-Type1-fonts
 Obsoletes:	XFree86-latin2-Type1-fonts
-Requires(post,postun):	fileutils
-Requires(post,postun):	grep
-Requires(post,postun):	textutils
-Requires(post,postun):	sed
-
+BuildArch:	noarch
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		t1fontsdir	%{_fontsdir}/Type1
 %define		t1afmdir	%{t1fontsdir}/afm
@@ -66,7 +64,7 @@ cd %{t1fontsdir}
 umask 022
 rm -f fonts.scale.bak Fontmap.bak
 cat fonts.scale.* | sort -u > fonts.scale.tmp
-cat fonts.scale.tmp | wc -l | sed -e 's/ //g' > fonts.scale
+cat fonts.scale.tmp | wc -l | tr -d ' ' > fonts.scale
 cat fonts.scale.tmp >> fonts.scale
 rm -f fonts.scale.tmp fonts.dir
 ln -sf fonts.scale fonts.dir
@@ -81,7 +79,7 @@ cd %{t1fontsdir}
 umask 022
 rm -f fonts.scale.bak Fontmap.bak
 cat fonts.scale.* 2>/dev/null | sort -u > fonts.scale.tmp
-cat fonts.scale.tmp | wc -l | sed -e 's/ //g' > fonts.scale
+cat fonts.scale.tmp | wc -l | tr -d ' ' > fonts.scale
 cat fonts.scale.tmp >> fonts.scale
 rm -f fonts.scale.tmp fonts.dir
 ln -sf fonts.scale fonts.dir
