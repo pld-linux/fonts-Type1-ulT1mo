@@ -6,6 +6,7 @@ Release:	2
 License:	Freeware
 Group:		X11/Fonts
 Source0:	ulT1mo-beta-1.0.tgz
+# Source0-md5:	90533d6c3b505333e7e78ffc0451beb5
 Source1:	%{name}.Fontmap
 Requires(post,postun):	fileutils
 Requires(post,postun):	textutils
