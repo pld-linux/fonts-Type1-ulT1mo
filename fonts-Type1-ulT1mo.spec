@@ -2,14 +2,14 @@ Summary:	ulT1mo collection of Type1 fonts with iso8859-2 encoding
 Summary(pl):	ulT1mo - zestaw fontów Type1 z kodowaniem iso8859-2
 Name:		fonts-Type1-ulT1mo
 Version:	1.0beta
-Release:	2
+Release:	3
 License:	Freeware
 Group:		X11/Fonts
 Source0:	ulT1mo-beta-1.0.tgz
 # Source0-md5:	90533d6c3b505333e7e78ffc0451beb5
 Source1:	%{name}.Fontmap
-Requires(post,postun):	fileutils
-Requires(post,postun):	textutils
+Requires(post,postun):	fontpostinst
+Requires:	%{_fontsdir}/Type1
 Obsoletes:	XFree86-fonts-Type1-ISO8859-2
 Obsoletes:	XFree86-ISO8859-2-Type1-fonts
 Obsoletes:	XFree86-latin2-Type1-fonts
@@ -61,34 +61,10 @@ install %{SOURCE1} $RPM_BUILD_ROOT%{t1fontsdir}/Fontmap.ulT1mo
 rm -rf $RPM_BUILD_ROOT
 
 %post
-cd %{t1fontsdir}
-umask 022
-rm -f fonts.scale.bak Fontmap.bak
-cat fonts.scale.* | sort -u > fonts.scale.tmp
-cat fonts.scale.tmp | wc -l | tr -d ' ' > fonts.scale
-cat fonts.scale.tmp >> fonts.scale
-rm -f fonts.scale.tmp fonts.dir
-ln -sf fonts.scale fonts.dir
-cat Fontmap.* > Fontmap
-cat fonts.alias.* > fonts.alias
-if [ -x /usr/X11R6/bin/xftcache ]; then
-	/usr/X11R6/bin/xftcache .
-fi
+fontpostinst Type1
 
 %postun
-cd %{t1fontsdir}
-umask 022
-rm -f fonts.scale.bak Fontmap.bak
-cat fonts.scale.* 2>/dev/null | sort -u > fonts.scale.tmp
-cat fonts.scale.tmp | wc -l | tr -d ' ' > fonts.scale
-cat fonts.scale.tmp >> fonts.scale
-rm -f fonts.scale.tmp fonts.dir
-ln -sf fonts.scale fonts.dir
-cat Fontmap.* > Fontmap 2>/dev/null
-cat fonts.alias.* > fonts.alias 2>/dev/null
-if [ -x /usr/X11R6/bin/xftcache ]; then
-	/usr/X11R6/bin/xftcache .
-fi
+fontpostinst Type1
 
 %files
 %defattr(644,root,root,755)
