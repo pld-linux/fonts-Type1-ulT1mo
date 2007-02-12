@@ -1,5 +1,5 @@
 Summary:	ulT1mo collection of Type1 fonts with iso8859-2 encoding
-Summary(pl):	ulT1mo - zestaw fontów Type1 z kodowaniem iso8859-2
+Summary(pl.UTF-8):   ulT1mo - zestaw fontÃ³w Type1 z kodowaniem iso8859-2
 Name:		fonts-Type1-ulT1mo
 Version:	1.0beta
 Release:	4
@@ -25,9 +25,9 @@ The ulT1mo (read ultimo) collection is bundle of freeware PostScript
 Type1 fonts with iso8859-2 encoding. Better don't install it if you
 don't like troubles.
 
-%description -l pl
-ulT1mo (czytaj: ultimo) to zestaw darmowych fontów Type1 z kodowaniem
-iso8859-2. Nie instaluj go, je¶li nie chcesz mieæ problemów.
+%description -l pl.UTF-8
+ulT1mo (czytaj: ultimo) to zestaw darmowych fontÃ³w Type1 z kodowaniem
+iso8859-2. Nie instaluj go, jeÅ›li nie chcesz mieÄ‡ problemÃ³w.
 
 %prep
 %setup -q -n ulT1mo-beta-1.0
