@@ -1,5 +1,5 @@
 Summary:	ulT1mo collection of Type1 fonts with iso8859-2 encoding
-Summary(pl.UTF-8):   ulT1mo - zestaw fontów Type1 z kodowaniem iso8859-2
+Summary(pl.UTF-8):	ulT1mo - zestaw fontów Type1 z kodowaniem iso8859-2
 Name:		fonts-Type1-ulT1mo
 Version:	1.0beta
 Release:	4
